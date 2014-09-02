@@ -42,6 +42,9 @@ module.exports = function (grunt) {
 							"./sampleprojects/sampleproject/README.md",
 							"./sampleprojects/sampleproject/package.json"
 						],
+						paths: {
+							"sampleframework": "../../sampleframework/0.1.0-dev/sampleframework"
+						},
 						imports: [
 							"./out/sampleframework"
 						]
