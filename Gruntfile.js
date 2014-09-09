@@ -63,6 +63,42 @@ module.exports = function (grunt) {
 						dest: "./out/sampleproject/doclets.json"
 					}
 				]
+			},
+			
+			"sampleproject2": {
+				files: [
+					{
+						args: [
+							"-c",
+							"./conf.json"
+						],
+						src: [
+							"./sampleprojects/sampleproject2",
+							"./sampleprojects/sampleproject2/README.md",
+							"./sampleprojects/sampleproject2/package.json"
+						],
+						paths: {
+							"sampleframework": "../../sampleframework/0.1.0-dev/sampleframework",
+							"sampleproject": "../../sampleproject/0.1.0-dev/sampleproject"
+						},
+						imports: [
+							"./out/sampleproject"
+						]
+					},
+					{
+						args: [
+							"-X",
+							"-c",
+							"./conf.json"
+						],
+						src: [
+							"./sampleprojects/sampleproject2",
+							"./sampleprojects/sampleproject2/README.md",
+							"./sampleprojects/sampleproject2/package.json"
+						],
+						dest: "./out/sampleproject2/doclets.json"
+					}
+				]
 			}
 		}
 	});
